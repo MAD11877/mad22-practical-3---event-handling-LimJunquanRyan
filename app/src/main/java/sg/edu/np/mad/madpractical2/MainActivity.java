@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     private String TAG = "Main Activity";
@@ -41,9 +42,12 @@ public class MainActivity extends AppCompatActivity {
                 userObj.followed = !(userObj.followed);
                 if (userObj.followed) {
                     followButton.setText("Unfollow");
+                    Toast.makeText(MainActivity.this, "Followed", Toast.LENGTH_SHORT).show();
                 } else {
                     followButton.setText("Follow");
+                    Toast.makeText(MainActivity.this, "Unfollowed", Toast.LENGTH_SHORT).show();
                 }
+
             }
         });
 
